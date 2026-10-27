@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mengenal komponen komputer dan cara kerjanya</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+<body>
+<div class="site">
+<header class="topbar"><div class="brand"><div class="brand-mark">PC</div><div><strong>KOMPONEN KOMPUTER</strong><span>MEDIA PEMBELAJARAN</span></div></div><div class="topbar-center"><button class="about-trigger home-trigger" id="homeTrigger" type="button" aria-label="Kembali ke halaman utama"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m3.5 10.5 8.5-7 8.5 7v9a1.5 1.5 0 0 1-1.5 1.5h-5v-6h-4v6H5a1.5 1.5 0 0 1-1.5-1.5z"/><path d="M2.5 10.5 12 2.8l9.5 7.7"/></svg></span><span class="nav-label">HOME</span><span class="nav-sheen" aria-hidden="true"></span></button><button class="about-trigger" id="aboutTrigger" type="button" aria-haspopup="dialog" aria-expanded="false"><span class="nav-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M6 3.5h8l4 4v13H6z"/><path d="M14 3.5v4h4M9 12h6M9 16h6"/></svg></span><span class="nav-label">ABOUT</span><span class="about-trigger-arrow" aria-hidden="true">↗</span><span class="nav-sheen" aria-hidden="true"></span></button></div><div class="topbar-actions"><div class="top-note">PILIH KOMPONEN · <b>LIHAT DETAIL</b></div><button class="theme-toggle" id="themeToggle" type="button" aria-label="Ubah tema" aria-pressed="false">
+  <span class="theme-icon theme-icon-moon" aria-hidden="true">◐</span>
+  <span class="theme-word theme-word-dark">DARK</span>
+  <span class="theme-track" aria-hidden="true"><i class="theme-thumb"></i></span>
+  <span class="theme-word theme-word-light">LIGHT</span>
+  <span class="theme-icon theme-icon-sun" aria-hidden="true">☀</span>
+</button></div></header>
+<section class="hero"><div><div class="eyebrow">MATERI KOMPONEN</div><h1>Mengenal <span class="highlight">komponen komputer</span><br>dan cara kerjanya</h1><p>Pilih komponen. Kartu akan bergerak ke tengah seperti perpindahan halaman pada video, lalu penjelasan komponen yang dipilih muncul di kartu yang sama.</p></div><div class="hero-side">SATU HALAMAN<br>SEMUA KOMPONEN<br>TANPA SLIDE BARU</div></section>
+<section class="stage-wrap"><div class="stage" id="stage"><div class="road" aria-hidden="true"></div><div id="cards"></div></div></section>
+<nav class="selectors" id="selectors" aria-label="Pilih komponen"></nav>
+<div class="hint">PILIH KOMPONEN · KLIK LAGI UNTUK MELIHAT INFORMASI · GESER KIRI / KANAN</div>
+<footer class="footer"><span>PROSESOR · RAM · VGA · MOTHERBOARD · SSD · HDD · FAN COOLER</span><span>MEDIA PEMBELAJARAN</span></footer>
+<div class="detail-overlay" id="detailOverlay" aria-hidden="true">
+  <div class="detail-screen">
+    <div class="detail-head">
+      <div class="detail-kicker" id="detailKicker">01 / PROSESOR</div>
+      <button class="detail-close" id="detailClose" type="button" aria-label="Tutup informasi"><span aria-hidden="true">×</span><span class="detail-close-label">KEMBALI</span></button>
+    </div>
+    <div class="detail-layout">
+      <div class="detail-photo-wrap"><img id="detailImage" alt="Foto komponen"></div>
+      <div class="detail-copy">
+        <div class="card-tag" id="detailTag">CPU · KOMPONEN</div>
+        <h2 class="detail-title" id="detailTitle">Prosesor</h2>
+        <p class="detail-intro" id="detailIntro"></p>
+        <div class="detail-cards">
+          <article class="detail-info-box"><small>APA ITU?</small><h3>Pengertian</h3><p id="detailWhat"></p></article>
+          <article class="detail-info-box"><small>FUNGSI</small><h3>Peran utama</h3><p id="detailFunc"></p></article>
+          <article class="detail-info-box"><small>CARA KERJA</small><h3>Bagaimana bekerja?</h3><p id="detailHow"></p></article>
+          <article class="detail-info-box"><small>GAMPANGNYA</small><h3>Contoh sederhana</h3><p id="detailEasy"></p></article>
+        </div>
+
+        <section class="component-3d" aria-label="Tampilan komponen 3D 360 derajat">
+          <div class="component-3d-head">
+            <div>
+              <div class="component-3d-kicker">INTERACTIVE 3D · 360°</div>
+              <h3 id="component3DTitle">3D · Prosesor</h3>
+            </div>
+            <div class="component-3d-status" id="component3DStatus">MEMUAT ENGINE…</div>
+          </div>
+
+          <div class="component-3d-stage" id="component3DStage">
+            <div class="component-3d-glow"></div>
+            <div class="component-3d-viewer" id="component3DViewer"></div>
+            <div class="component-3d-scanline" aria-hidden="true"></div>
+            <div class="component-3d-badge" id="component3DBadge">3D ENGINE · REAL-TIME</div>
+            <div class="component-3d-angle"><span id="component3DAngle">000°</span><small>ROTATION</small></div>
+            <div class="component-3d-corner component-3d-corner-a"></div>
+            <div class="component-3d-corner component-3d-corner-b"></div>
+          </div>
+
+          <div class="component-3d-toolbar">
+            <button class="component-3d-btn active" id="component3DAuto" type="button" aria-pressed="true">AUTO ROTATE · ON</button>
+            <button class="component-3d-btn" id="component3DReset" type="button">RESET VIEW</button>
+            <div class="component-3d-hint" id="component3DHint">DRAG · PUTAR 360° &nbsp;•&nbsp; SCROLL / PINCH · ZOOM &nbsp;•&nbsp; RIGHT DRAG · PAN</div>
+          </div>
+        </section>
+
+        <div class="detail-back-note">ESC / × · KEMBALI KE DAFTAR KOMPONEN</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-overlay" id="aboutOverlay" aria-hidden="true">
+  <div class="about-backdrop" data-about-close></div>
+  <section class="about-panel" aria-labelledby="aboutTitle">
+    <div class="about-panel-head">
+      <div>
+        <div class="about-kicker">ABOUT · MEDIA PEMBELAJARAN</div>
+        <h2 id="aboutTitle">Tentang website ini</h2>
+      </div>
+      <button class="about-close about-home-button" id="aboutClose" type="button" aria-label="Kembali ke halaman utama"><span aria-hidden="true">⌂</span> HOME</button>
+    </div>
+
+    <div class="about-lead">
+      Website ini dibuat sebagai bagian dari tugas Personal Project, dengan tema pengenalan komponen komputer dan cara kerjanya. Website ini dirancang untuk menjadi media pembelajaran interaktif yang membantu pengunjung memahami bagian-bagian penting di dalam komputer melalui tampilan yang lebih visual, menarik, dan mudah dipelajari. Ide pembuatan website ini berangkat dari keinginan untuk menyampaikan materi komputer dengan cara yang tidak hanya berisi tulisan, tetapi juga memberi kesempatan kepada pengguna untuk memilih komponen dan melihat penjelasannya secara langsung.
+
+Melalui website ini, pengguna dapat mempelajari pengertian, fungsi, cara kerja, serta contoh sederhana dari prosesor, RAM, VGA, motherboard, SSD, HDD, dan fan cooler. Beberapa komponen juga dilengkapi tampilan 3D interaktif yang dapat diputar untuk melihat bentuknya dari berbagai arah. Dengan begitu, pengguna diharapkan lebih mudah membedakan setiap komponen dan memahami peran masing-masing saat komputer digunakan. Proses perancangan website ini juga menjadi kesempatan untuk mempelajari pembuatan website, penyusunan informasi, desain antarmuka, serta penggunaan elemen interaktif sebagai pendukung pembelajaran.
+    </div>
+
+    <div class="about-grid">
+      <article class="about-card about-card-wide">
+        <span class="about-card-label">TUJUAN</span>
+        <h3>Belajar komputer dengan cara yang lebih nyata</h3>
+        <p>Tujuan utama website ini adalah membuat materi komponen komputer terasa lebih dekat dengan benda aslinya. Daripada hanya melihat nama dan definisi, pengguna dapat menghubungkan materi dengan bentuk komponen, fungsi, dan proses kerja yang terjadi ketika komputer menjalankan sebuah perintah.</p>
+      </article>
+
+      <article class="about-card">
+        <span class="about-card-label">MANFAAT</span>
+        <h3>Memudahkan memahami materi</h3>
+        <p>Visual, penjelasan bertahap, dan tampilan interaktif membantu pengguna memahami perbedaan antara prosesor, RAM, VGA, motherboard, SSD, HDD, dan fan cooler. Materi juga lebih mudah diingat karena informasi disandingkan dengan bentuk fisik komponen.</p>
+      </article>
+
+      <article class="about-card">
+        <span class="about-card-label">FUNGSI</span>
+        <h3>Menjelaskan peran setiap komponen</h3>
+        <p>Setiap bagian memiliki tugas yang berbeda. Prosesor mengolah instruksi, RAM menjadi tempat kerja sementara, VGA menangani grafis, motherboard menghubungkan berbagai bagian, SSD dan HDD menyimpan data, sedangkan fan cooler membantu menjaga suhu komponen.</p>
+      </article>
+
+      <article class="about-card">
+        <span class="about-card-label">CARA KERJA</span>
+        <h3>Dari instruksi sampai hasil</h3>
+        <p>Saat pengguna memberi perintah, data dan instruksi berpindah melalui beberapa bagian komputer. Prosesor mengambil instruksi, memprosesnya, lalu berkomunikasi dengan memori dan perangkat lain. Hasil akhirnya dapat berupa gambar, teks, suara, video, atau tindakan yang terlihat di layar.</p>
+      </article>
+
+      <article class="about-card">
+        <span class="about-card-label">ISI PEMBELAJARAN</span>
+        <h3>Materi yang dipelajari</h3>
+        <p>Materi pada website mencakup pengertian, fungsi, cara kerja, dan contoh sederhana dari tujuh komponen utama. Pengguna juga dapat melihat tampilan 3D interaktif untuk memahami bentuk komponen dari depan, samping, hingga belakang.</p>
+      </article>
+
+      <article class="about-card about-card-wide">
+        <span class="about-card-label">CARA MENGGUNAKAN</span>
+        <h3>Eksplorasi dengan urutan yang sederhana</h3>
+        <p>Pilih salah satu komponen pada halaman utama. Klik kembali pada komponen yang berada di tengah untuk membuka halaman informasinya. Baca bagian pengertian, fungsi, cara kerja, dan contoh sederhananya, kemudian gunakan viewer 3D untuk memutar objek 360 derajat. Di perangkat sentuh, objek dapat diputar dengan gerakan jari dan diperbesar dengan pinch.</p>
+      </article>
+    </div>
+
+    <div class="about-footer">
+      <span>INTERACTIVE · VISUAL · EXPLORATIVE</span>
+      <span>MEDIA PEMBELAJARAN KOMPONEN KOMPUTER</span>
+    </div>
+  </section>
+</div>
+
+</div>
+<script src="component-3d.js" defer></script>
+<script src="script.js" defer></script>
+<script>
+/* Fallback aman: pastikan tombol X/KEMBALI selalu menutup detail. */
+(function(){
+  const overlay=document.getElementById('detailOverlay');
+  const close=document.getElementById('detailClose');
+  if(!overlay || !close) return;
+  close.addEventListener('click',function(event){
+    event.preventDefault();
+    event.stopPropagation();
+    if(typeof closeComponentDetails==='function') closeComponentDetails();
+    else {
+      overlay.classList.remove('show');
+      overlay.setAttribute('aria-hidden','true');
+      document.body.style.overflow='';
+    }
+  });
+})();
+</script>
+</body>
+</html>
